@@ -60,8 +60,8 @@
   </component>
   <component name="RunManager">
     <configuration name="HotelApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="mobileApp" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.mobileApp.HotelApplication" />
+      <module name="be_hotel" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.be_hotel.HotelApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -78,6 +78,7 @@
       <workItem from="1732007064199" duration="2021000" />
       <workItem from="1732327086929" duration="4887000" />
       <workItem from="1732336833422" duration="1058000" />
+      <workItem from="1732337922227" duration="516000" />
     </task>
     <servers />
   </component>

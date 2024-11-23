@@ -1,6 +1,6 @@
-package com.example.mobileApp.service;
+package com.example.be_hotel.service;
 
-import com.example.mobileApp.entity.User;
+import com.example.be_hotel.entity.User;
 
 import java.util.List;
 

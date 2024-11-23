@@ -1,8 +1,8 @@
-package com.example.mobileApp.service.iml;
+package com.example.be_hotel.service.iml;
 
-import com.example.mobileApp.entity.User;
-import com.example.mobileApp.reposity.UserRepository;
-import com.example.mobileApp.service.UserService;
+import com.example.be_hotel.entity.User;
+import com.example.be_hotel.reposity.UserRepository;
+import com.example.be_hotel.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;

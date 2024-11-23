@@ -1,7 +1,7 @@
-package com.example.mobileApp.controller;
+package com.example.be_hotel.controller;
 
-import com.example.mobileApp.entity.User;
-import com.example.mobileApp.service.UserService;
+import com.example.be_hotel.entity.User;
+import com.example.be_hotel.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

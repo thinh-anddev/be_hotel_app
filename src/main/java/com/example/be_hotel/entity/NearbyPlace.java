@@ -1,24 +1,22 @@
-package com.example.mobileApp.entity;
+package com.example.be_hotel.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import java.util.List;
 
 @Entity
 @Data
-public class ReviewBreakdown {
+public class NearbyPlace {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String name;
-    private String description;
-    private Integer totalMentioned;
-    private Integer positive;
-    private Integer negative;
-    private Integer neutral;
 
     @ManyToOne
     @JoinColumn(name = "hotel_id")
     private Hotel hotel;
-}
 
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "nearbyPlace")
+    private List<Transportation> transportations;
+}

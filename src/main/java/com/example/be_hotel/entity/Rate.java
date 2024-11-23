@@ -1,16 +1,20 @@
-package com.example.mobileApp.entity;
+package com.example.be_hotel.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
 @Data
-public class GPSCoordinates {
+public class Rate {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Double latitude;
-    private Double longitude;
+
+    private String lowest;
+    private Integer extractedLowest;
+    private String beforeTaxesFees;
+    private Integer extractedBeforeTaxesFees;
 
     @OneToOne
     @JoinColumn(name = "hotel_id")

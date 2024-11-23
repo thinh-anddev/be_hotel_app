@@ -1,6 +1,5 @@
-package com.example.mobileApp.entity;
+package com.example.be_hotel.entity;
 
-import com.example.mobileApp.entity.NearbyPlace;
 import jakarta.persistence.*;
 import lombok.Data;
 import java.util.List;
