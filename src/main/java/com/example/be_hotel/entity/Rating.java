@@ -1,5 +1,6 @@
 package com.example.be_hotel.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -14,6 +15,7 @@ public class Rating {
     private Integer stars;
     private Integer count;
 
+    @JsonBackReference
     @ManyToOne
     @JoinColumn(name = "hotel_id")
     private Hotel hotel;

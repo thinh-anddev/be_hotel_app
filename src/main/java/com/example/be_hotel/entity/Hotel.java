@@ -1,5 +1,6 @@
 package com.example.be_hotel.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Data;
 import java.util.List;
@@ -24,26 +25,33 @@ public class Hotel {
     private String propertyToken;
     private String serpapiPropertyDetailsLink;
 
+    @JsonManagedReference
     @OneToOne(mappedBy = "hotel")
     private GPSCoordinates gpsCoordinates;
 
+    @JsonManagedReference
     @OneToOne(mappedBy = "hotel")
     private Rate ratePerNight;
 
+    @JsonManagedReference
     @ElementCollection(fetch = FetchType.LAZY)
     @CollectionTable(name = "hotel_amenities", joinColumns = @JoinColumn(name = "hotel_id"))
     @Column(name = "amenity")
     private List<String> amenities;
 
+    @JsonManagedReference
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "hotel")
     private List<NearbyPlace> nearbyPlaces;
 
+    @JsonManagedReference
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "hotel")
     private List<Image> images;
 
+    @JsonManagedReference
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "hotel")
     private List<Rating> ratings;
 
+    @JsonManagedReference
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "hotel")
     private List<ReviewBreakdown> reviewsBreakdown;
 }

@@ -4,7 +4,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="833cd553-82b1-4084-89e7-bd094e8c25d3" name="Changes" comment="" />
+    <list default="true" id="833cd553-82b1-4084-89e7-bd094e8c25d3" name="Changes" comment="update project">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/controller/HotelController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/helper/SearchEngineHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/reposity/HotelRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/HotelService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/iml/HotelServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/entity/GPSCoordinates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/entity/GPSCoordinates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/entity/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/entity/Hotel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/entity/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/entity/Image.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/entity/NearbyPlace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/entity/NearbyPlace.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/entity/Rate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/entity/Rate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/entity/Rating.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/entity/Rating.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/entity/ReviewBreakdown.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/entity/ReviewBreakdown.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/entity/Transportation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/entity/Transportation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mobileApp/MobileAppApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mobileApp/controller/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mobileApp/entity/GPSCoordinates.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mobileApp/entity/Hotel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mobileApp/entity/Image.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mobileApp/entity/NearbyPlace.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mobileApp/entity/Rate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mobileApp/entity/Rating.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mobileApp/entity/ReviewBreakdown.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mobileApp/entity/Transportation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mobileApp/entity/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mobileApp/reposity/UserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mobileApp/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mobileApp/service/iml/UserServiceImpl.class" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +43,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -79,10 +110,35 @@
       <workItem from="1732327086929" duration="4887000" />
       <workItem from="1732336833422" duration="1058000" />
       <workItem from="1732337922227" duration="516000" />
+      <workItem from="1732338464972" duration="5702000" />
     </task>
+    <task id="LOCAL-00001" summary="update project">
+      <option name="closed" value="true" />
+      <created>1732338520533</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1732338520533</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update project" />
+    <option name="LAST_COMMIT_MESSAGE" value="update project" />
   </component>
 </project>

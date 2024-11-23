@@ -1,5 +1,6 @@
 package com.example.be_hotel.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -17,6 +18,7 @@ public class ReviewBreakdown {
     private Integer negative;
     private Integer neutral;
 
+    @JsonBackReference
     @ManyToOne
     @JoinColumn(name = "hotel_id")
     private Hotel hotel;

@@ -1,5 +1,6 @@
 package com.example.be_hotel.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -12,6 +13,7 @@ public class GPSCoordinates {
     private Double latitude;
     private Double longitude;
 
+    @JsonBackReference
     @OneToOne
     @JoinColumn(name = "hotel_id")
     private Hotel hotel;
