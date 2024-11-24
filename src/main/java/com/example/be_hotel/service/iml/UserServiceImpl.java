@@ -24,7 +24,7 @@ public  class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User getUser(Integer id) {
+    public User getUser(Long id) {
         User user = userRepository
                 .findById(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,"Invalid user id"));
@@ -32,7 +32,7 @@ public  class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void updateUser(Integer id, User user) {
+    public void updateUser(Long id, User user) {
         userRepository
                 .findById(id)
                 .orElseThrow((() -> new ResponseStatusException(HttpStatus.NOT_FOUND,"Invalid user id"+ id)));
@@ -43,7 +43,7 @@ public  class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void deleteUser(Integer id) {
+    public void deleteUser(Long id) {
         User user = userRepository
                 .findById(id)
                 .orElseThrow((() -> new ResponseStatusException(HttpStatus.NOT_FOUND,"Invalid user id"+ id)));
