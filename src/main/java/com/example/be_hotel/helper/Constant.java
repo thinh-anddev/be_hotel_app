@@ -1,4 +1,4 @@
-package com.example.be_hotel;
+package com.example.be_hotel.helper;
 
 public class Constant {
     public static class HistoryOrder {

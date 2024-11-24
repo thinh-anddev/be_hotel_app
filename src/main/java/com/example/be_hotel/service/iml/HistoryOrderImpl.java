@@ -1,6 +1,6 @@
 package com.example.be_hotel.service.iml;
 
-import com.example.be_hotel.Constant;
+import com.example.be_hotel.helper.Constant;
 import com.example.be_hotel.entity.HistoryOrder;
 import com.example.be_hotel.entity.Hotel;
 import com.example.be_hotel.entity.User;

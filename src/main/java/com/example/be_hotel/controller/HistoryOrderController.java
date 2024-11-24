@@ -41,7 +41,7 @@ public class HistoryOrderController {
             List<Hotel> hotels = historyOrderService.getAllHotelByUser(userId);
             return new ResponseEntity<>(hotels, HttpStatus.OK);
         } catch (Exception e) {
-            e.printStackTrace();  // In ra chi tiết lỗi trong log
+            e.printStackTrace();
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
