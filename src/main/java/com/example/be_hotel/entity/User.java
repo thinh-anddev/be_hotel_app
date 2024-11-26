@@ -1,5 +1,6 @@
 package com.example.be_hotel.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -12,6 +13,7 @@ import java.util.List;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
+@JsonIgnoreProperties({"historyOrder"})
 public class User {
     @Id
     @GeneratedValue
@@ -23,6 +25,10 @@ public class User {
     private String avatar;
 
     @JsonManagedReference
-    @OneToOne(mappedBy = "user")
-    private HistoryOrder historyOrder;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+    private List<HistoryOrder> historyOrder;
+
+    @JsonManagedReference
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+    private List<HistoryRating> historyRating;
 }

@@ -4,16 +4,15 @@ import com.example.be_hotel.helper.Constant;
 import com.example.be_hotel.entity.HistoryOrder;
 import com.example.be_hotel.entity.Hotel;
 import com.example.be_hotel.entity.User;
-import com.example.be_hotel.reposity.HistoryOrderRepository;
-import com.example.be_hotel.reposity.HotelRepository;
-import com.example.be_hotel.reposity.UserRepository;
+import com.example.be_hotel.repository.HistoryOrderRepository;
+import com.example.be_hotel.repository.HotelRepository;
+import com.example.be_hotel.repository.UserRepository;
 import com.example.be_hotel.service.HistoryOrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class HistoryOrderImpl implements HistoryOrderService {
@@ -66,11 +65,6 @@ public class HistoryOrderImpl implements HistoryOrderService {
     @Override
     public List<Hotel> getAllHotelByUser(Long userId) {
         User user = userRepository.findById(userId).orElseThrow(() -> new RuntimeException("User not found"));
-        List<HistoryOrder> historyOrders = historyOrderRepository.findByUser(user);
-        List<Hotel> hotels = historyOrders.stream()
-                .flatMap(order -> order.getHotels().stream())
-                .distinct()
-                .collect(Collectors.toList());
-        return hotels;
+        return historyOrderRepository.findHotelsByUser(user);
     }
 }

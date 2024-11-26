@@ -4,6 +4,8 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.ToString;
+
 import java.util.List;
 
 @Entity
@@ -28,31 +30,38 @@ public class Hotel {
 
     @JsonManagedReference
     @OneToOne(mappedBy = "hotel")
+    @ToString.Exclude
     private GPSCoordinates gpsCoordinates;
 
     @JsonManagedReference
+    @ToString.Exclude
     @OneToOne(mappedBy = "hotel")
     private Rate ratePerNight;
 
     @JsonManagedReference
+    @ToString.Exclude
     @ElementCollection(fetch = FetchType.LAZY)
     @CollectionTable(name = "hotel_amenities", joinColumns = @JoinColumn(name = "hotel_id"))
     @Column(name = "amenity")
     private List<String> amenities;
 
     @JsonManagedReference
+    @ToString.Exclude
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "hotel")
     private List<NearbyPlace> nearbyPlaces;
 
     @JsonManagedReference
+    @ToString.Exclude
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "hotel")
     private List<Image> images;
 
     @JsonManagedReference
+    @ToString.Exclude
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "hotel")
     private List<Rating> ratings;
 
     @JsonManagedReference
+    @ToString.Exclude
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "hotel")
     private List<ReviewBreakdown> reviewsBreakdown;
 }

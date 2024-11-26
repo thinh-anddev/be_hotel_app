@@ -2,12 +2,13 @@ package com.example.be_hotel.service.iml;
 
 import com.example.be_hotel.entity.Hotel;
 import com.example.be_hotel.helper.SearchEngineHelper;
-import com.example.be_hotel.reposity.HotelRepository;
+import com.example.be_hotel.repository.HotelRepository;
 import com.example.be_hotel.service.HotelService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -42,5 +43,11 @@ public class HotelServiceImpl implements HotelService {
                     return matchesName || matchesNearbyPlaces;
                 })
                 .collect(Collectors.toList());
+    }
+
+    @Override
+    public Hotel getHotelById(Long hotelId) {
+        Optional<Hotel> hotelOptional = hotelRepository.findById(hotelId);
+        return hotelOptional.orElse(null);
     }
 }

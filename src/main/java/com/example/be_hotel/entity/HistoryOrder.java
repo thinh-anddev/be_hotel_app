@@ -16,7 +16,7 @@ public class HistoryOrder {
     private Long id;
 
     @JsonBackReference
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
 

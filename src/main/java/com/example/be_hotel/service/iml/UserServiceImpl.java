@@ -1,7 +1,7 @@
 package com.example.be_hotel.service.iml;
 
 import com.example.be_hotel.entity.User;
-import com.example.be_hotel.reposity.UserRepository;
+import com.example.be_hotel.repository.UserRepository;
 import com.example.be_hotel.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
