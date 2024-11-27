@@ -7,6 +7,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Data
@@ -23,6 +24,7 @@ public class User {
     private String fullName;
     private Integer age;
     private String avatar;
+    private LocalDateTime dateCreated;
 
     @JsonManagedReference
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")

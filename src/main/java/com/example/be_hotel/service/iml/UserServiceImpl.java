@@ -4,50 +4,40 @@ import com.example.be_hotel.entity.User;
 import com.example.be_hotel.repository.UserRepository;
 import com.example.be_hotel.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.web.server.ResponseStatusException;
 
-import java.util.List;
+import java.util.Optional;
 
 @Service
-public  class UserServiceImpl implements UserService {
+public class UserServiceImpl implements UserService {
     @Autowired
-    private UserRepository userRepository;
+    UserRepository userRepository;
+
+    @Autowired
+    PasswordEncoder passwordEncoder;
+
+
     @Override
-    public void addUser(User user) {
+    public String registerUser(User user) {
+        Optional<User> existingUser = userRepository.findByUserName(user.getUserName());
+        if (existingUser.isPresent()) {
+            return "Username already exists";
+        }
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
         userRepository.save(user);
-    }
-    @Override
-    public List<User> findAllUser() {
-        return userRepository.findAll();
+        return "User registered successfully";
     }
 
     @Override
-    public User getUser(Long id) {
-        User user = userRepository
-                .findById(id)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,"Invalid user id"));
-        return user;
-    }
-
-    @Override
-    public void updateUser(Long id, User user) {
-        userRepository
-                .findById(id)
-                .orElseThrow((() -> new ResponseStatusException(HttpStatus.NOT_FOUND,"Invalid user id"+ id)));
-        user.setId(id);
-
-        userRepository.save(user);
-
-    }
-
-    @Override
-    public void deleteUser(Long id) {
-        User user = userRepository
-                .findById(id)
-                .orElseThrow((() -> new ResponseStatusException(HttpStatus.NOT_FOUND,"Invalid user id"+ id)));
-        userRepository.delete(user);
-
+    public String loginUser(User user) {
+        Optional<User> existingUser = userRepository.findByUserName(user.getUserName());
+        if (existingUser.isEmpty()) {
+            return "User not found";
+        }
+        if (!passwordEncoder.matches(user.getPassword(), existingUser.get().getPassword())) {
+            return "Wrong password";
+        }
+        return "Logged in successfully";
     }
 }

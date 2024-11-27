@@ -4,42 +4,26 @@ import com.example.be_hotel.entity.User;
 import com.example.be_hotel.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/api/auth")
 public class UserController {
-
     @Autowired
-    private UserService userService;
+    UserService userService;
 
-    @PostMapping("/add")
-    public String addUser(@RequestBody User user) {
-        userService.addUser(user);
-        return "success";
+    @PostMapping("/register")
+    public ResponseEntity<String> register(@RequestBody User user) {
+        String response = userService.registerUser(user);
+        return ResponseEntity.ok(response);
     }
 
-    @GetMapping()
-    public List<User> getAllUser() {
-        return userService.findAllUser();
-    }
-
-    @GetMapping("/getUser")
-    public User getUser(@RequestParam Long id) {
-        return userService.getUser(id);
-    }
-
-    @PutMapping("/update/{id}")
-    public ResponseEntity<Void> updateUser(@PathVariable Long id, @RequestBody User user) {
-        userService.updateUser(id, user);
-        return ResponseEntity.noContent().build();
-    }
-
-    @DeleteMapping("/delete/{id}")
-    public ResponseEntity<Void> deleteUser(@PathVariable Long id) {
-        userService.deleteUser(id);
-        return ResponseEntity.noContent().build();
+    @PostMapping("/login")
+    public ResponseEntity<String> login(@RequestBody User user) {
+        String response = userService.loginUser(user);
+        return ResponseEntity.ok(response);
     }
 }
