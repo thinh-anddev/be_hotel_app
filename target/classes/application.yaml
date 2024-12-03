@@ -4,13 +4,22 @@ server:
     include-message: always
 
 spring:
+  main:
+    allow-bean-definition-overriding: true
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
-    url: jdbc:mysql://localhost:3306/hotel_db
+    url: jdbc:mysql://localhost:3306/hotel_db?useUnicode=true&characterEncoding=UTF-8
     password: ""
+
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
     open-in-view: true
+
+  jackson:
+    default-property-inclusion: non_null
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+    date-format: yyyy-MM-dd'T'HH:mm:ss\
