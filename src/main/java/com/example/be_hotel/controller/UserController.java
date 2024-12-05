@@ -6,10 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/auth")
@@ -17,7 +14,7 @@ public class UserController {
     @Autowired
     UserService userService;
 
-    @PostMapping(value = "/register", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping( "/register")
     public ResponseEntity<String> register(@RequestBody User user) {
         try {
             userService.registerUser(user);
@@ -28,12 +25,12 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<String> login(@RequestBody User user) {
+    public ResponseEntity<String> login(@RequestParam String username, @RequestParam String password) {
         try {
-            userService.loginUser(user);
-            return new ResponseEntity<>("register successfully", HttpStatus.CREATED);
+            userService.loginUser(username, password);
+            return new ResponseEntity<>("login successfully", HttpStatus.CREATED);
         } catch (Exception e) {
-            return new ResponseEntity<>("register failed", HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>("login failed", HttpStatus.BAD_REQUEST);
         }
     }
 }

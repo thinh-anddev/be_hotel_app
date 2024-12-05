@@ -30,12 +30,12 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public String loginUser(User user) {
-        Optional<User> existingUser = userRepository.findByUserName(user.getUserName());
+    public String loginUser(String username, String password) {
+        Optional<User> existingUser = userRepository.findByUserName(username);
         if (existingUser.isEmpty()) {
             return "User not found";
         }
-        if (!user.getPassword().equals(existingUser.get().getPassword())) {
+        if (!password.equals(existingUser.get().getPassword())) {
             return "Wrong password";
         }
         return "Logged in successfully";
