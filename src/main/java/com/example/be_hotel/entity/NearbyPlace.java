@@ -21,6 +21,6 @@ public class NearbyPlace {
     private Hotel hotel;
 
     @JsonManagedReference
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "nearbyPlace")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "nearbyPlace", fetch = FetchType.EAGER)
     private List<Transportation> transportations;
 }

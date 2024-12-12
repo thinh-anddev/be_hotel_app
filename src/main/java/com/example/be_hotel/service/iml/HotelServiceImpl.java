@@ -1,6 +1,7 @@
 package com.example.be_hotel.service.iml;
 
 import com.example.be_hotel.entity.Hotel;
+import com.example.be_hotel.entity.Rating;
 import com.example.be_hotel.helper.SearchEngineHelper;
 import com.example.be_hotel.repository.HotelRepository;
 import com.example.be_hotel.service.HotelService;
@@ -49,5 +50,10 @@ public class HotelServiceImpl implements HotelService {
     public Hotel getHotelById(Long hotelId) {
         Optional<Hotel> hotelOptional = hotelRepository.findById(hotelId);
         return hotelOptional.orElse(null);
+    }
+
+    @Override
+    public List<Rating> getRatingsByHotelId(Long hotelId) {
+        return hotelRepository.findRatingsByHotelId(hotelId);
     }
 }
