@@ -37,4 +37,13 @@ public class HotelController {
         }
         return ResponseEntity.ok(ratings);
     }
+
+    @GetMapping("{hotelId}/rateAvg")
+    public ResponseEntity<Double> getListRatingAvg(@PathVariable Long hotelId) {
+        List<Rating> ratings = hotelService.getRatingsByHotelId(hotelId);
+        if (ratings.isEmpty()) {
+            return ResponseEntity.noContent().build();
+        }
+        return ResponseEntity.ok(hotelService.getAvgRatingByHotelId(hotelId));
+    }
 }

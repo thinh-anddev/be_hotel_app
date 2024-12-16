@@ -56,4 +56,18 @@ public class HotelServiceImpl implements HotelService {
     public List<Rating> getRatingsByHotelId(Long hotelId) {
         return hotelRepository.findRatingsByHotelId(hotelId);
     }
+
+    @Override
+    public double getAvgRatingByHotelId(Long hotelId) {
+        Optional<Hotel> hotelOptional = hotelRepository.findById(hotelId);
+        Hotel hotel = hotelOptional.orElse(null);
+        assert hotel != null;
+        List<Rating> ratings = hotel.getRatings();
+        if (ratings == null || ratings.isEmpty()) {
+            return 0.0;
+        }
+        double totalStar = ratings.stream().mapToDouble(rating -> rating.getStars() * rating.getCount()).sum();
+        int totalCount = ratings.stream().mapToInt(Rating::getCount).sum();
+        return totalCount == 0 ? 0.0 : totalStar / totalCount;
+    }
 }

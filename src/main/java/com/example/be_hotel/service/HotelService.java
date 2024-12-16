@@ -10,4 +10,5 @@ public interface HotelService {
     List<Hotel> searchHotels(String query);
     Hotel getHotelById(Long hotelId);
     List<Rating> getRatingsByHotelId(Long hotelId);
+    double getAvgRatingByHotelId(Long hotelId);
 }
