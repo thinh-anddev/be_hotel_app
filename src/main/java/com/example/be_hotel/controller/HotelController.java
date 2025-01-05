@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/hotels")
@@ -45,5 +46,15 @@ public class HotelController {
             return ResponseEntity.noContent().build();
         }
         return ResponseEntity.ok(hotelService.getAvgRatingByHotelId(hotelId));
+    }
+
+    @GetMapping("{hotelId}/totalRate")
+    public ResponseEntity<Integer> getTotalRate(@PathVariable Long hotelId) {
+        return ResponseEntity.ok(hotelService.getTotalStar(hotelId));
+    }
+
+    @GetMapping("{hotelId}/countStar")
+    public ResponseEntity<Map<Integer, Integer>> getCountStar(@PathVariable Long hotelId) {
+        return ResponseEntity.ok(hotelService.getCountStar(hotelId));
     }
 }

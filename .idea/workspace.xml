@@ -4,11 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="833cd553-82b1-4084-89e7-bd094e8c25d3" name="Changes" comment="update">
+    <list default="true" id="833cd553-82b1-4084-89e7-bd094e8c25d3" name="Changes" comment="implement history rating">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/dto/ChangePassword.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/dto/GetUserResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/dto/UpdateUserRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/controller/HotelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/controller/HotelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/entity/HistoryOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/entity/HistoryOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/entity/HistoryRating.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/entity/HistoryRating.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/repository/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/HotelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/HotelService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/iml/HotelServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/iml/HotelServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/iml/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/iml/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,13 +57,6 @@
     &quot;accountId&quot;: &quot;13323b34-1eca-41b7-be0f-cca01cf58523&quot;
   }
 }</component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -74,7 +78,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/springboot_react_studentmanager&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/New folder/NLU/nlu-atbm&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -132,6 +136,19 @@
       <workItem from="1733931655532" duration="3000" />
       <workItem from="1733996078681" duration="66000" />
       <workItem from="1734316217667" duration="1881000" />
+      <workItem from="1734576491215" duration="1000" />
+      <workItem from="1734771408984" duration="3743000" />
+      <workItem from="1734849356863" duration="3094000" />
+      <workItem from="1734922020640" duration="49000" />
+      <workItem from="1735222219402" duration="529000" />
+      <workItem from="1735262417977" duration="1656000" />
+      <workItem from="1735613123894" duration="23000" />
+      <workItem from="1735828355030" duration="6454000" />
+      <workItem from="1735916368209" duration="2858000" />
+      <workItem from="1735965273329" duration="5773000" />
+      <workItem from="1735995603014" duration="2269000" />
+      <workItem from="1736039013573" duration="676000" />
+      <workItem from="1736049042906" duration="3785000" />
     </task>
     <task id="LOCAL-00001" summary="update project">
       <option name="closed" value="true" />

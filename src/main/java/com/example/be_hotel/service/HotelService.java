@@ -4,6 +4,7 @@ import com.example.be_hotel.entity.Hotel;
 import com.example.be_hotel.entity.Rating;
 
 import java.util.List;
+import java.util.Map;
 
 public interface HotelService {
     List<Hotel> getAllHotels();
@@ -11,4 +12,6 @@ public interface HotelService {
     Hotel getHotelById(Long hotelId);
     List<Rating> getRatingsByHotelId(Long hotelId);
     double getAvgRatingByHotelId(Long hotelId);
+    int getTotalStar(Long hotelId);
+    Map<Integer, Integer> getCountStar(Long hotelId);
 }

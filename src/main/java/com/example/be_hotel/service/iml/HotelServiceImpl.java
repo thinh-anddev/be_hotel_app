@@ -8,7 +8,9 @@ import com.example.be_hotel.service.HotelService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -69,5 +71,28 @@ public class HotelServiceImpl implements HotelService {
         double totalStar = ratings.stream().mapToDouble(rating -> rating.getStars() * rating.getCount()).sum();
         int totalCount = ratings.stream().mapToInt(Rating::getCount).sum();
         return totalCount == 0 ? 0.0 : totalStar / totalCount;
+    }
+
+    @Override
+    public int getTotalStar(Long hotelId) {
+        Optional<Hotel> hotelOptional = hotelRepository.findById(hotelId);
+        Hotel hotel = hotelOptional.orElse(null);
+        assert hotel != null;
+        List<Rating> ratings = hotel.getRatings();
+        int totalStar = ratings.stream().mapToInt(Rating::getCount).sum();
+        return totalStar;
+    }
+
+    @Override
+    public Map<Integer, Integer> getCountStar(Long hotelId) {
+        Map<Integer, Integer> starCountMap = new HashMap<>();
+        Optional<Hotel> hotelOptional = hotelRepository.findById(hotelId);
+        Hotel hotel = hotelOptional.orElse(null);
+        assert hotel != null;
+        List<Rating> ratings = hotel.getRatings();
+        for (Rating rating : ratings) {
+            starCountMap.put(rating.getStars(), rating.getCount());
+        }
+        return starCountMap;
     }
 }
