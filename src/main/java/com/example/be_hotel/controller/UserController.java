@@ -1,9 +1,12 @@
 package com.example.be_hotel.controller;
 
+import com.example.be_hotel.config.MailConfig;
 import com.example.be_hotel.dto.ChangePassword;
 import com.example.be_hotel.dto.GetUserResponse;
 import com.example.be_hotel.dto.UpdateUserRequest;
 import com.example.be_hotel.entity.User;
+import com.example.be_hotel.helper.PasswordUtils;
+import com.example.be_hotel.service.EmailService;
 import com.example.be_hotel.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,6 +22,18 @@ import java.util.Map;
 public class UserController {
     @Autowired
     UserService userService;
+    @Autowired
+    EmailService emailService;
+    @PostMapping("/forgot-password")
+    public ResponseEntity<String> forgotPassword(@RequestParam String email) {
+        try {
+            String result = emailService.sendNewPassword(email);
+            return ResponseEntity.ok(result);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Invalid email address or error occurred.");
+        }
+    }
 
     @PostMapping("/register")
     public ResponseEntity<String> register(@RequestBody User user) {

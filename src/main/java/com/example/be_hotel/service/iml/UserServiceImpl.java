@@ -25,13 +25,24 @@ public class UserServiceImpl implements UserService {
         if (user.getPassword() == null || user.getPassword().length() < 8) {
             return "Password must be at least 8 characters long";
         }
-        Optional<User> existingUser = userRepository.findByUserName(user.getUserName());
-        if (existingUser.isPresent()) {
+        if (user.getEmail() == null || !user.getEmail().contains("@")) {
+            return "Invalid email address";
+        }
+
+        Optional<User> existingUserByUsername = userRepository.findByUserName(user.getUserName());
+        if (existingUserByUsername.isPresent()) {
             return "Username already exists";
         }
+
+        Optional<User> existingUserByEmail = userRepository.findUserByEmail(user.getEmail());
+        if (existingUserByEmail.isPresent()) {
+            return "Email already exists";
+        }
+
         user.setDateCreated(LocalDateTime.now());
         userRepository.save(user);
         return "User registered successfully";
+
     }
     @Override
     public Map<String, Object> loginUser(String username, String password) {

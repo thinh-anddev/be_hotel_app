@@ -16,7 +16,12 @@ public class UserOrder {
     private Long hotelId;
     private Long userId;
     private String orderCode;
+    private String orderName;
+    private String orderContact;
+    private String orderEmail;
     private String orderStatus;
+    private Integer numberPeople;
+    private Double totalPrice;
     @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
     private LocalDateTime dateCreated;
 }

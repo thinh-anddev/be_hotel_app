@@ -4,14 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="833cd553-82b1-4084-89e7-bd094e8c25d3" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/controller/OrderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/dto/ListOrderResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/entity/UserOrder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/repository/UserOrderRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/UserOrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/iml/UserOrderImpl.java" afterDir="false" />
+    <list default="true" id="833cd553-82b1-4084-89e7-bd094e8c25d3" name="Changes" comment="update order">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/config/MailConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/helper/PasswordUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/EmailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/iml/EmailServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/controller/HotelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/controller/HotelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/entity/UserOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/entity/UserOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/iml/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/iml/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +144,11 @@
       <workItem from="1735965273329" duration="5773000" />
       <workItem from="1735995603014" duration="2269000" />
       <workItem from="1736039013573" duration="676000" />
-      <workItem from="1736049042906" duration="11659000" />
+      <workItem from="1736049042906" duration="12508000" />
+      <workItem from="1736070741401" duration="2161000" />
+      <workItem from="1736095275707" duration="5386000" />
+      <workItem from="1736246677008" duration="124000" />
+      <workItem from="1736269994151" duration="3793000" />
     </task>
     <task id="LOCAL-00001" summary="update project">
       <option name="closed" value="true" />
@@ -206,7 +214,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736054712853</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="update order">
+      <option name="closed" value="true" />
+      <created>1736063682969</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1736063682969</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,6 +245,7 @@
     <MESSAGE value="update bug" />
     <MESSAGE value="implement user function" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="update order" />
+    <option name="LAST_COMMIT_MESSAGE" value="update order" />
   </component>
 </project>

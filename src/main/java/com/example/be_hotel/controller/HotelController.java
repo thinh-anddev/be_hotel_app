@@ -4,6 +4,7 @@ import com.example.be_hotel.entity.Hotel;
 import com.example.be_hotel.entity.Rating;
 import com.example.be_hotel.service.HotelService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -28,6 +29,11 @@ public class HotelController {
             return ResponseEntity.noContent().build();
         }
         return ResponseEntity.ok(hotels);
+    }
+    @GetMapping("/getHotel/{id}")
+    public ResponseEntity<Hotel> getHotelById(@PathVariable Long id) {
+        Hotel hotel = hotelService.getHotelById(id);
+        return new ResponseEntity<>(hotel, HttpStatus.OK);
     }
 
     @GetMapping("{hotelId}/ratings")
