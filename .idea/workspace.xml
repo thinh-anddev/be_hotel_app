@@ -4,18 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="833cd553-82b1-4084-89e7-bd094e8c25d3" name="Changes" comment="update order">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/config/MailConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/helper/PasswordUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/EmailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/iml/EmailServiceImpl.java" afterDir="false" />
+    <list default="true" id="833cd553-82b1-4084-89e7-bd094e8c25d3" name="Changes" comment="update forgot password">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/dto/SendIOTPResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/controller/HotelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/controller/HotelController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/entity/UserOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/entity/UserOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/iml/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/iml/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/helper/PasswordUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/helper/PasswordUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/EmailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/iml/EmailServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/iml/EmailServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +143,8 @@
       <workItem from="1736070741401" duration="2161000" />
       <workItem from="1736095275707" duration="5386000" />
       <workItem from="1736246677008" duration="124000" />
-      <workItem from="1736269994151" duration="3793000" />
+      <workItem from="1736269994151" duration="4137000" />
+      <workItem from="1736307308209" duration="3901000" />
     </task>
     <task id="LOCAL-00001" summary="update project">
       <option name="closed" value="true" />
@@ -222,7 +218,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736063682969</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="update forgot password">
+      <option name="closed" value="true" />
+      <created>1736273815214</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1736273815214</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,6 +250,7 @@
     <MESSAGE value="implement user function" />
     <MESSAGE value="update" />
     <MESSAGE value="update order" />
-    <option name="LAST_COMMIT_MESSAGE" value="update order" />
+    <MESSAGE value="update forgot password" />
+    <option name="LAST_COMMIT_MESSAGE" value="update forgot password" />
   </component>
 </project>

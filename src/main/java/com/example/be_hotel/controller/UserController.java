@@ -3,6 +3,7 @@ package com.example.be_hotel.controller;
 import com.example.be_hotel.config.MailConfig;
 import com.example.be_hotel.dto.ChangePassword;
 import com.example.be_hotel.dto.GetUserResponse;
+import com.example.be_hotel.dto.SendIOTPResponse;
 import com.example.be_hotel.dto.UpdateUserRequest;
 import com.example.be_hotel.entity.User;
 import com.example.be_hotel.helper.PasswordUtils;
@@ -32,6 +33,20 @@ public class UserController {
         } catch (Exception e) {
             e.printStackTrace();
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Invalid email address or error occurred.");
+        }
+    }
+    @PostMapping("/send-otp")
+    public ResponseEntity<SendIOTPResponse> sendOTP(@RequestBody User user){
+        try{
+            Map<String, String> rs = emailService.sendOTP(user);
+            String message = rs.get("message");
+            SendIOTPResponse response = new SendIOTPResponse();
+            response.setOtpCode(rs.get("otpCode"));
+            response.setMessage(message);
+            return ResponseEntity.ok(response);
+        } catch (Exception e){
+            e.printStackTrace();
+            return null;
         }
     }
 

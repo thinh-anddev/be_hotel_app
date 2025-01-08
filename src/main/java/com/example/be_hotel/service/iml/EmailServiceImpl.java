@@ -9,6 +9,8 @@ import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 
 @Service
@@ -40,5 +42,41 @@ public class EmailServiceImpl implements EmailService {
             rs = "email dont exist";
         }
         return rs;
+    }
+
+    @Override
+    public Map<String, String> sendOTP(User user) {
+        String otp = PasswordUtils.generateRandomOTP();
+        String rs = "";
+        Map<String, String> response = new HashMap<>();
+        Optional<User> existingUserByUsername = userRepository.findByUserName(user.getUserName());
+        Optional<User> existingUserByEmail = userRepository.findUserByEmail(user.getEmail());
+        if (user.getUserName() == null || user.getUserName().length() < 6) {
+            rs = "Username must be at least 6 characters long";
+        } else if (user.getPassword() == null || user.getPassword().length() < 8) {
+            rs = "Password must be at least 8 characters long";
+
+        } else if (user.getEmail() == null || !user.getEmail().contains("@")) {
+            rs = "Invalid email address";
+
+        } else if (existingUserByUsername.isPresent()) {
+            rs = "Username already exists";
+        } else if (existingUserByEmail.isPresent()) {
+            rs = "Email already exists";
+        } else {
+            rs = "successfully";
+            String subject = "Ứng dụng booking hotel gửi mã OTP";
+            String message = "Chúng tôi đã tạo OTP cho tài khoản của bạn: " + otp +
+                    "\nVui lòng nhập OTP để tiến hành đăng kí.";
+
+            SimpleMailMessage email = new SimpleMailMessage();
+            email.setTo(user.getEmail());
+            email.setSubject(subject);
+            email.setText(message);
+            emailSender.send(email);
+        }
+        response.put("otpCode", otp);
+        response.put("message", rs);
+        return response;
     }
 }
