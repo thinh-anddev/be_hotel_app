@@ -27,7 +27,7 @@ public class Hotel {
     private Double locationRating;
     private String propertyToken;
     private String serpapiPropertyDetailsLink;
-
+    private Integer remainRooms;
     @JsonManagedReference
     @OneToOne(mappedBy = "hotel")
     @ToString.Exclude

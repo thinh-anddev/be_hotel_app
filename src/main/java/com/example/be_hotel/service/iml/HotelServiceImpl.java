@@ -5,6 +5,7 @@ import com.example.be_hotel.entity.Rating;
 import com.example.be_hotel.helper.SearchEngineHelper;
 import com.example.be_hotel.repository.HotelRepository;
 import com.example.be_hotel.service.HotelService;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -94,5 +95,11 @@ public class HotelServiceImpl implements HotelService {
             starCountMap.put(rating.getStars(), rating.getCount());
         }
         return starCountMap;
+    }
+    @Transactional
+    @Override
+    public boolean decreaseRemainRoom(Long hotelId) {
+        int updateRow = hotelRepository.decreaseRemainRooms(hotelId);
+        return updateRow > 0;
     }
 }

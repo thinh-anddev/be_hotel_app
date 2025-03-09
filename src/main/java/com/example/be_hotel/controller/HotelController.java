@@ -63,4 +63,9 @@ public class HotelController {
     public ResponseEntity<Map<Integer, Integer>> getCountStar(@PathVariable Long hotelId) {
         return ResponseEntity.ok(hotelService.getCountStar(hotelId));
     }
+    @PostMapping("{hotelId}/decreaseRemainRoom")
+        public ResponseEntity<String> test(@PathVariable Long hotelId){
+        boolean success = hotelService.decreaseRemainRoom(hotelId);
+        return success ? ResponseEntity.ok("successfully") : ResponseEntity.ok("failed");
+    }
 }

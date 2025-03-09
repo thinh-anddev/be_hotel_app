@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="833cd553-82b1-4084-89e7-bd094e8c25d3" name="Changes" comment="update forgot password">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/dto/SendIOTPResponse.java" afterDir="false" />
+    <list default="true" id="833cd553-82b1-4084-89e7-bd094e8c25d3" name="Changes" comment="update register by email">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/helper/PasswordUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/helper/PasswordUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/EmailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/iml/EmailServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/iml/EmailServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/controller/HotelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/controller/HotelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/entity/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/entity/Hotel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/repository/HotelRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/repository/HotelRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/HotelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/HotelService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/iml/HotelServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/iml/HotelServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +144,18 @@
       <workItem from="1736095275707" duration="5386000" />
       <workItem from="1736246677008" duration="124000" />
       <workItem from="1736269994151" duration="4137000" />
-      <workItem from="1736307308209" duration="3901000" />
+      <workItem from="1736307308209" duration="4389000" />
+      <workItem from="1736321018704" duration="1014000" />
+      <workItem from="1736396167101" duration="4000" />
+      <workItem from="1736491194421" duration="3000" />
+      <workItem from="1736829348380" duration="7000" />
+      <workItem from="1736923468588" duration="21000" />
+      <workItem from="1737102079164" duration="4000" />
+      <workItem from="1737444089161" duration="391000" />
+      <workItem from="1737609123073" duration="21000" />
+      <workItem from="1741070719976" duration="4000" />
+      <workItem from="1741333880028" duration="2000" />
+      <workItem from="1741485623591" duration="2922000" />
     </task>
     <task id="LOCAL-00001" summary="update project">
       <option name="closed" value="true" />
@@ -226,7 +237,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736273815214</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="update register by email">
+      <option name="closed" value="true" />
+      <created>1736312789656</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1736312789657</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,6 +270,7 @@
     <MESSAGE value="update" />
     <MESSAGE value="update order" />
     <MESSAGE value="update forgot password" />
-    <option name="LAST_COMMIT_MESSAGE" value="update forgot password" />
+    <MESSAGE value="update register by email" />
+    <option name="LAST_COMMIT_MESSAGE" value="update register by email" />
   </component>
 </project>
