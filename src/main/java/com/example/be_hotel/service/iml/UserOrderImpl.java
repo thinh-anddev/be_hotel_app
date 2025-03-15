@@ -41,4 +41,10 @@ public class UserOrderImpl implements UserOrderService {
         result = "successfully";
         return result;
     }
+
+    @Override
+    public boolean checkCanCancelOrder(Long id) {
+        UserOrder order = getOrderById(id);
+        return order.canCancel();
+    }
 }

@@ -9,4 +9,5 @@ public interface UserOrderService {
     UserOrder getOrderById(Long id);
     List<UserOrder> getListOrderUser(Long userId);
     String updateStatusOrder(Long id, String status);
+    boolean checkCanCancelOrder(Long id);
 }

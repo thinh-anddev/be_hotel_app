@@ -7,6 +7,8 @@ import jakarta.persistence.Id;
 import lombok.Data;
 
 import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
+
 @Entity
 @Data
 public class UserOrder {
@@ -20,8 +22,16 @@ public class UserOrder {
     private String orderContact;
     private String orderEmail;
     private String orderStatus;
+    private Integer rooms;
     private Integer numberPeople;
     private Double totalPrice;
     @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
     private LocalDateTime dateCreated;
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
+    private LocalDateTime checkInDate;
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
+    private LocalDateTime checkOutDate;
+    public boolean canCancel() {
+        return ChronoUnit.HOURS.between(dateCreated, LocalDateTime.now()) < 24;
+    }
 }

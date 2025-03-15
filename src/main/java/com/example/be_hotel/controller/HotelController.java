@@ -30,6 +30,7 @@ public class HotelController {
         }
         return ResponseEntity.ok(hotels);
     }
+
     @GetMapping("/getHotel/{id}")
     public ResponseEntity<Hotel> getHotelById(@PathVariable Long id) {
         Hotel hotel = hotelService.getHotelById(id);
@@ -62,10 +63,5 @@ public class HotelController {
     @GetMapping("{hotelId}/countStar")
     public ResponseEntity<Map<Integer, Integer>> getCountStar(@PathVariable Long hotelId) {
         return ResponseEntity.ok(hotelService.getCountStar(hotelId));
-    }
-    @PostMapping("{hotelId}/decreaseRemainRoom")
-        public ResponseEntity<String> test(@PathVariable Long hotelId){
-        boolean success = hotelService.decreaseRemainRoom(hotelId);
-        return success ? ResponseEntity.ok("successfully") : ResponseEntity.ok("failed");
     }
 }

@@ -14,5 +14,6 @@ public interface HotelService {
     double getAvgRatingByHotelId(Long hotelId);
     int getTotalStar(Long hotelId);
     Map<Integer, Integer> getCountStar(Long hotelId);
-    boolean decreaseRemainRoom(Long hotelId);
+    boolean decreaseRemainRoom(Long hotelId, Integer roomOrder);
+    boolean increaseRemainRoom(Long hotelId, Integer roomOrder);
 }

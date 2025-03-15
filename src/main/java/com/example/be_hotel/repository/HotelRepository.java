@@ -14,6 +14,9 @@ public interface HotelRepository extends JpaRepository<Hotel, Long> {
     @Query("SELECT r from Rating r WHERE r.hotel.id = :hotelId")
     List<Rating> findRatingsByHotelId(Long hotelId);
     @Modifying
-    @Query("UPDATE Hotel h SET h.remainRooms = h.remainRooms - 1 WHERE h.id = :hotelId AND h.remainRooms > 0")
-    int decreaseRemainRooms(@Param("hotelId") Long hotelId);
+    @Query("UPDATE Hotel h SET h.remainRooms = h.remainRooms - :roomOrder WHERE h.id = :hotelId AND h.remainRooms >= :roomOrder")
+    int decreaseRemainRooms(@Param("hotelId") Long hotelId, @Param("roomOrder") Integer roomOrder);
+    @Modifying
+    @Query("UPDATE Hotel h SET h.remainRooms = h.remainRooms + :roomOrder WHERE h.id = :hotelId")
+    int increaseRemainRooms(@Param("hotelId") Long hotelId, @Param("roomOrder") Integer roomOrder);
 }

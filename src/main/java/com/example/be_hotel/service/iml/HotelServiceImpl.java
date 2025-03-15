@@ -98,8 +98,14 @@ public class HotelServiceImpl implements HotelService {
     }
     @Transactional
     @Override
-    public boolean decreaseRemainRoom(Long hotelId) {
-        int updateRow = hotelRepository.decreaseRemainRooms(hotelId);
+    public boolean decreaseRemainRoom(Long hotelId, Integer roomOrder) {
+        int updateRow = hotelRepository.decreaseRemainRooms(hotelId, roomOrder);
         return updateRow > 0;
+    }
+    @Transactional
+    @Override
+    public boolean increaseRemainRoom(Long hotelId, Integer roomOrder){
+        int updateRow=hotelRepository.increaseRemainRooms(hotelId,roomOrder);
+        return updateRow>0;
     }
 }
