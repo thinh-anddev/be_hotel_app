@@ -1,5 +1,6 @@
 package com.example.be_hotel.controller;
 
+import com.example.be_hotel.dto.HotelBookingStat;
 import com.example.be_hotel.dto.ListOrderResponse;
 import com.example.be_hotel.entity.Revenue;
 import com.example.be_hotel.entity.UserOrder;
@@ -89,4 +90,25 @@ public class OrderController {
         revenueService.save(revenue);
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
+    @GetMapping("/getAllHotelStats")
+    public ResponseEntity<List<HotelBookingStat>> getAllHotelStats() {
+        List<HotelBookingStat> stats = service.getHotelBookingStats();
+        if (stats.isEmpty()) {
+            return ResponseEntity.noContent().build();
+        }
+        return ResponseEntity.ok(stats);
+    }
+    @GetMapping("/most-booked")
+    public ResponseEntity<HotelBookingStat> getMostBookedHotel() {
+        return service.getMostBookedHotel()
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.noContent().build());
+    }
+    @GetMapping("/least-booked")
+    public ResponseEntity<HotelBookingStat> getLeastBookedHotel() {
+        return service.getLeastBookedHotel()
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.noContent().build());
+    }
+
 }
