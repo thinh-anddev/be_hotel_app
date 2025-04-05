@@ -1,14 +1,17 @@
 package com.example.be_hotel.controller;
 
 import com.example.be_hotel.dto.ListOrderResponse;
+import com.example.be_hotel.entity.Revenue;
 import com.example.be_hotel.entity.UserOrder;
 import com.example.be_hotel.service.HotelService;
+import com.example.be_hotel.service.RevenueService;
 import com.example.be_hotel.service.UserOrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController
@@ -18,6 +21,8 @@ public class OrderController {
     UserOrderService service;
     @Autowired
     HotelService hotelService;
+    @Autowired
+    RevenueService revenueService;
 
     @PostMapping("/saveOrder")
     public ResponseEntity<String> saveOrder(@RequestBody UserOrder order) {
@@ -71,6 +76,17 @@ public class OrderController {
     @PutMapping("/updateOrderStatus/{orderId}")
     public ResponseEntity<String> updateOrderStatus(@PathVariable Long orderId, @RequestParam String status) {
         String response = service.updateStatusOrder(orderId, status);
+        return new ResponseEntity<>(response, HttpStatus.CREATED);
+    }
+    @PutMapping("/successfullPayment/{orderId}")
+    public ResponseEntity<String> successfullPayment(@PathVariable Long orderId) {
+        String response = service.updateStatusOrder(orderId, "PAID");
+        UserOrder order = service.getOrderById(orderId);
+        Revenue revenue = new Revenue();
+        revenue.setHotelId(order.getHotelId());
+        revenue.setRevenue(order.getTotalPrice());
+        revenue.setDate(LocalDateTime.now());
+        revenueService.save(revenue);
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
 }
