@@ -63,6 +63,16 @@ public class UserOrderImpl implements UserOrderService {
     }
 
     @Override
+    public List<HotelBookingStat> findTop10MostBookedHotel() {
+        List<Object[]> rawStats=userOrderRepository.findTop10HotelBookingStats();
+        return rawStats.stream().map(row->{
+            Long hotelId=((Number) row[0]).longValue();
+            Long totalOrders=((Number) row[1]).longValue();
+            return new HotelBookingStat(hotelId,totalOrders);
+        }).collect(Collectors.toList());
+    }
+
+    @Override
     public Optional<HotelBookingStat> getMostBookedHotel() {
         return getHotelBookingStats().stream().findFirst();
     }

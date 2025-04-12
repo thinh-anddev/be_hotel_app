@@ -97,6 +97,13 @@ public class OrderController {
             return ResponseEntity.noContent().build();
         }
         return ResponseEntity.ok(stats);
+    } @GetMapping("/getTop10HotelStats")
+    public ResponseEntity<List<HotelBookingStat>> getTop10HotelStats() {
+        List<HotelBookingStat> stats = service.findTop10MostBookedHotel();
+        if (stats.isEmpty()) {
+            return ResponseEntity.noContent().build();
+        }
+        return ResponseEntity.ok(stats);
     }
     @GetMapping("/most-booked")
     public ResponseEntity<HotelBookingStat> getMostBookedHotel() {

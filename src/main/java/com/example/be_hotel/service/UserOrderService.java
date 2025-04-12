@@ -13,6 +13,7 @@ public interface UserOrderService {
     String updateStatusOrder(Long id, String status);
     boolean checkCanCancelOrder(Long id);
     List<HotelBookingStat> getHotelBookingStats();
+    List<HotelBookingStat> findTop10MostBookedHotel();
     Optional<HotelBookingStat> getMostBookedHotel();
     Optional<HotelBookingStat> getLeastBookedHotel();
 }

@@ -19,4 +19,14 @@ public interface UserOrderRepository extends JpaRepository<UserOrder, Long> {
     ORDER BY total_orders DESC
 """, nativeQuery = true)
     List<Object[]> findHotelBookingStats();
+    @Query(value = """
+    SELECT hotel_id, COUNT(*) as total_orders
+    FROM user_order
+    WHERE order_status = 'PAID'
+    GROUP BY hotel_id
+    ORDER BY total_orders DESC
+    LIMIT 10
+""", nativeQuery = true)
+    List<Object[]> findTop10HotelBookingStats();
+
 }
