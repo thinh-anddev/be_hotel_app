@@ -1,5 +1,6 @@
 package com.example.be_hotel.controller;
 
+import com.example.be_hotel.dto.HotelDTO;
 import com.example.be_hotel.entity.Hotel;
 import com.example.be_hotel.entity.Rating;
 import com.example.be_hotel.service.HotelService;
@@ -63,5 +64,10 @@ public class HotelController {
     @GetMapping("{hotelId}/countStar")
     public ResponseEntity<Map<Integer, Integer>> getCountStar(@PathVariable Long hotelId) {
         return ResponseEntity.ok(hotelService.getCountStar(hotelId));
+    }
+    @PostMapping("/add")
+    public ResponseEntity<Hotel> createHotel(@RequestBody HotelDTO hotelDTO) {
+        Hotel saved = hotelService.addHotel(hotelDTO);
+        return new ResponseEntity<>(saved, HttpStatus.CREATED);
     }
 }

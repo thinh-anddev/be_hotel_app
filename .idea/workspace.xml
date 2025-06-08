@@ -4,10 +4,44 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="833cd553-82b1-4084-89e7-bd094e8c25d3" name="Changes" comment="update stat">
+    <list default="true" id="54a84a03-c770-48d6-9b92-596652d551cf" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/dto/HotelDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/dto/ImageDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/controller/HotelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/controller/HotelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/HotelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/HotelService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/iml/HotelServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/iml/HotelServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/iml/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/iml/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/config/GlobalExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/config/GlobalExceptionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/config/WebConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/controller/HistoryOrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/controller/HistoryOrderController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/controller/HotelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/controller/HotelController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/controller/OrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/controller/OrderController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/GPSCoordinates.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/GPSCoordinates.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/HistoryOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/HistoryOrder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/HistoryRating.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/HistoryRating.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/Hotel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/Hotel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/Image.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/Image.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/NearbyPlace.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/NearbyPlace.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/Rate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/Rate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/Rating.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/Rating.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/ReviewBreakdown.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/ReviewBreakdown.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/Transportation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/Transportation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/UserOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/UserOrder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/service/HotelService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/service/HotelService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/service/iml/EmailServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/service/iml/EmailServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/service/iml/HistoryOrderImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/service/iml/HistoryOrderImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/service/iml/HistoryRatingImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/service/iml/HistoryRatingImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/service/iml/HotelServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/service/iml/HotelServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/service/iml/UserOrderImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/service/iml/UserOrderImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/service/iml/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/service/iml/UserServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,13 +51,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
-  </component>
-  <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="origin/master" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -36,53 +66,60 @@
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
     &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;thinh-nlu&quot;
+    &quot;assignee&quot;: &quot;thinh-anddev&quot;
   }
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/thinh-nlu/be_hotel_app&quot;,
-    &quot;accountId&quot;: &quot;13323b34-1eca-41b7-be0f-cca01cf58523&quot;
+    &quot;url&quot;: &quot;https://github.com/thinh-anddev/be_hotel_app.git&quot;,
+    &quot;accountId&quot;: &quot;45e5f03c-fdc1-46c6-9eed-0c64d2b3c039&quot;
   }
 }</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 6
+  &quot;associatedIndex&quot;: 1
 }</component>
-  <component name="ProjectId" id="2p3uPohF3UpTIMrZULgs4QnnFXT" />
+  <component name="ProjectId" id="2xxSZr1DluxkZi6xHmVrD4iMzH8" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
     &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
     &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
     &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;Spring Boot.HotelApplication.executor&quot;: &quot;Run&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/New folder/NLU/be_hotel_app&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.example.mobileApp.entity" />
-    </key>
-  </component>
   <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
     <configuration name="HotelApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="be_hotel" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.be_hotel.HotelApplication" />
@@ -94,218 +131,23 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193" />
-        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193" />
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.25410.129" />
+        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-IU-251.25410.129" />
       </set>
     </attachedChunks>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="833cd553-82b1-4084-89e7-bd094e8c25d3" name="Changes" comment="" />
-      <created>1732007062473</created>
+      <changelist id="54a84a03-c770-48d6-9b92-596652d551cf" name="Changes" comment="" />
+      <created>1748878290976</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1732007062473</updated>
-      <workItem from="1732007064199" duration="2021000" />
-      <workItem from="1732327086929" duration="4887000" />
-      <workItem from="1732336833422" duration="1058000" />
-      <workItem from="1732337922227" duration="516000" />
-      <workItem from="1732338464972" duration="5867000" />
-      <workItem from="1732379053026" duration="3544000" />
-      <workItem from="1732417470241" duration="3246000" />
-      <workItem from="1732675288496" duration="4626000" />
-      <workItem from="1732698698104" duration="1100000" />
-      <workItem from="1732845755414" duration="74000" />
-      <workItem from="1733100209822" duration="22480000" />
-      <workItem from="1733379646409" duration="5618000" />
-      <workItem from="1733451381320" duration="7729000" />
-      <workItem from="1733712646622" duration="5782000" />
-      <workItem from="1733731003456" duration="4730000" />
-      <workItem from="1733931655532" duration="3000" />
-      <workItem from="1733996078681" duration="66000" />
-      <workItem from="1734316217667" duration="1881000" />
-      <workItem from="1734576491215" duration="1000" />
-      <workItem from="1734771408984" duration="3743000" />
-      <workItem from="1734849356863" duration="3094000" />
-      <workItem from="1734922020640" duration="49000" />
-      <workItem from="1735222219402" duration="529000" />
-      <workItem from="1735262417977" duration="1656000" />
-      <workItem from="1735613123894" duration="23000" />
-      <workItem from="1735828355030" duration="6454000" />
-      <workItem from="1735916368209" duration="2858000" />
-      <workItem from="1735965273329" duration="5773000" />
-      <workItem from="1735995603014" duration="2269000" />
-      <workItem from="1736039013573" duration="676000" />
-      <workItem from="1736049042906" duration="12508000" />
-      <workItem from="1736070741401" duration="2161000" />
-      <workItem from="1736095275707" duration="5386000" />
-      <workItem from="1736246677008" duration="124000" />
-      <workItem from="1736269994151" duration="4137000" />
-      <workItem from="1736307308209" duration="4389000" />
-      <workItem from="1736321018704" duration="1014000" />
-      <workItem from="1736396167101" duration="4000" />
-      <workItem from="1736491194421" duration="3000" />
-      <workItem from="1736829348380" duration="7000" />
-      <workItem from="1736923468588" duration="21000" />
-      <workItem from="1737102079164" duration="4000" />
-      <workItem from="1737444089161" duration="391000" />
-      <workItem from="1737609123073" duration="21000" />
-      <workItem from="1741070719976" duration="4000" />
-      <workItem from="1741333880028" duration="2000" />
-      <workItem from="1741485623591" duration="3384000" />
-      <workItem from="1741503604752" duration="4663000" />
-      <workItem from="1741616471446" duration="13000" />
-      <workItem from="1741663307187" duration="1000" />
-      <workItem from="1741743278673" duration="38000" />
-      <workItem from="1741775420959" duration="4000" />
-      <workItem from="1741779560670" duration="15000" />
-      <workItem from="1741836140014" duration="134000" />
-      <workItem from="1741944410791" duration="3000" />
-      <workItem from="1742001621638" duration="2955000" />
-      <workItem from="1742225859866" duration="35000" />
-      <workItem from="1742540954167" duration="1234000" />
-      <workItem from="1742622671020" duration="2134000" />
-      <workItem from="1742659927747" duration="105000" />
-      <workItem from="1743003115358" duration="1008000" />
-      <workItem from="1743215996662" duration="353000" />
-      <workItem from="1743217876813" duration="721000" />
-      <workItem from="1743671026593" duration="979000" />
-      <workItem from="1743821323458" duration="641000" />
-      <workItem from="1743827349037" duration="883000" />
-      <workItem from="1743843665201" duration="2428000" />
-      <workItem from="1743863674888" duration="2427000" />
-      <workItem from="1744380825025" duration="967000" />
-      <workItem from="1744425726739" duration="1334000" />
-      <workItem from="1744453278478" duration="1939000" />
-      <workItem from="1745336687652" duration="235000" />
-      <workItem from="1745981234825" duration="2221000" />
-      <workItem from="1746020044121" duration="2573000" />
-      <workItem from="1746960660943" duration="39000" />
-      <workItem from="1748657760124" duration="1406000" />
-      <workItem from="1748756556058" duration="609000" />
+      <updated>1748878290976</updated>
+      <workItem from="1748878292837" duration="2886000" />
+      <workItem from="1749005328098" duration="781000" />
+      <workItem from="1749006478797" duration="623000" />
+      <workItem from="1749269206979" duration="6272000" />
     </task>
-    <task id="LOCAL-00001" summary="update project">
-      <option name="closed" value="true" />
-      <created>1732338520533</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1732338520533</updated>
-    </task>
-    <task id="LOCAL-00002" summary="implement search function">
-      <option name="closed" value="true" />
-      <created>1732354897805</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1732354897805</updated>
-    </task>
-    <task id="LOCAL-00003" summary="update bug">
-      <option name="closed" value="true" />
-      <created>1732613453679</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1732613453679</updated>
-    </task>
-    <task id="LOCAL-00004" summary="implement user function">
-      <option name="closed" value="true" />
-      <created>1732698803446</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1732698803446</updated>
-    </task>
-    <task id="LOCAL-00005" summary="update">
-      <option name="closed" value="true" />
-      <created>1733383260570</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1733383260571</updated>
-    </task>
-    <task id="LOCAL-00006" summary="update">
-      <option name="closed" value="true" />
-      <created>1733483011216</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1733483011216</updated>
-    </task>
-    <task id="LOCAL-00007" summary="update">
-      <option name="closed" value="true" />
-      <created>1733996099219</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1733996099219</updated>
-    </task>
-    <task id="LOCAL-00008" summary="update">
-      <option name="closed" value="true" />
-      <created>1736054712853</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1736054712853</updated>
-    </task>
-    <task id="LOCAL-00009" summary="update order">
-      <option name="closed" value="true" />
-      <created>1736063682969</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1736063682969</updated>
-    </task>
-    <task id="LOCAL-00010" summary="update forgot password">
-      <option name="closed" value="true" />
-      <created>1736273815214</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1736273815214</updated>
-    </task>
-    <task id="LOCAL-00011" summary="update register by email">
-      <option name="closed" value="true" />
-      <created>1736312789656</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1736312789657</updated>
-    </task>
-    <task id="LOCAL-00012" summary="update remain room">
-      <option name="closed" value="true" />
-      <created>1741490742511</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1741490742511</updated>
-    </task>
-    <task id="LOCAL-00013" summary="update revenue">
-      <option name="closed" value="true" />
-      <created>1743845836799</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1743845836799</updated>
-    </task>
-    <task id="LOCAL-00014" summary="update stat">
-      <option name="closed" value="true" />
-      <created>1743867290088</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1743867290088</updated>
-    </task>
-    <task id="LOCAL-00015" summary="update stat">
-      <option name="closed" value="true" />
-      <created>1744454122611</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1744454122611</updated>
-    </task>
-    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,19 +163,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="update project" />
-    <MESSAGE value="implement search function" />
-    <MESSAGE value="update bug" />
-    <MESSAGE value="implement user function" />
-    <MESSAGE value="update" />
-    <MESSAGE value="update order" />
-    <MESSAGE value="update forgot password" />
-    <MESSAGE value="update register by email" />
-    <MESSAGE value="update remain room" />
-    <MESSAGE value="update revenue" />
-    <MESSAGE value="update stat" />
-    <option name="LAST_COMMIT_MESSAGE" value="update stat" />
   </component>
 </project>

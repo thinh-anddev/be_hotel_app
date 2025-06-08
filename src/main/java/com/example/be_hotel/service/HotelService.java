@@ -1,5 +1,6 @@
 package com.example.be_hotel.service;
 
+import com.example.be_hotel.dto.HotelDTO;
 import com.example.be_hotel.entity.Hotel;
 import com.example.be_hotel.entity.Rating;
 
@@ -16,4 +17,5 @@ public interface HotelService {
     Map<Integer, Integer> getCountStar(Long hotelId);
     boolean decreaseRemainRoom(Long hotelId, Integer roomOrder);
     boolean increaseRemainRoom(Long hotelId, Integer roomOrder);
+    Hotel addHotel(HotelDTO hotelDTO);
 }

@@ -16,7 +16,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+
+import static org.hibernate.internal.util.collections.CollectionHelper.listOf;
 
 @RestController
 @RequestMapping("/api/auth")
@@ -91,6 +94,14 @@ public class UserController {
         }
         GetUserResponse response = new GetUserResponse("User found", user);
         return new ResponseEntity<>(response, HttpStatus.OK);
+    }
+    @GetMapping("/findAll")
+    public ResponseEntity<List<User>> findAdd() {
+        List<User> users = userService.getAllUsers();
+        if (users == null) {
+            return new ResponseEntity<>(listOf(), HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<>(users, HttpStatus.OK);
     }
     @PutMapping("/updateUser/{id}")
     public ResponseEntity<String> updateUser(

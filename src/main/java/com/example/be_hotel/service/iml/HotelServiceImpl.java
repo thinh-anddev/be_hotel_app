@@ -1,6 +1,9 @@
 package com.example.be_hotel.service.iml;
 
+import com.example.be_hotel.dto.HotelDTO;
+import com.example.be_hotel.dto.ImageDTO;
 import com.example.be_hotel.entity.Hotel;
+import com.example.be_hotel.entity.Image;
 import com.example.be_hotel.entity.Rating;
 import com.example.be_hotel.helper.SearchEngineHelper;
 import com.example.be_hotel.repository.HotelRepository;
@@ -9,10 +12,7 @@ import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
@@ -107,5 +107,39 @@ public class HotelServiceImpl implements HotelService {
     public boolean increaseRemainRoom(Long hotelId, Integer roomOrder){
         int updateRow=hotelRepository.increaseRemainRooms(hotelId,roomOrder);
         return updateRow>0;
+    }
+
+    @Override
+    public Hotel addHotel(HotelDTO dto) {
+        Hotel hotel = new Hotel();
+        hotel.setType(dto.getType());
+        hotel.setName(dto.getName());
+        hotel.setLink(dto.getLink());
+        hotel.setCheckInTime(dto.getCheckInTime());
+        hotel.setCheckOutTime(dto.getCheckOutTime());
+        hotel.setHotelClass(dto.getHotelClass());
+        hotel.setExtractedHotelClass(dto.getExtractedHotelClass());
+        hotel.setOverallRating(dto.getOverallRating());
+        hotel.setReviews(dto.getReviews());
+        hotel.setLocationRating(dto.getLocationRating());
+        hotel.setPropertyToken(dto.getPropertyToken());
+        hotel.setSerpapiPropertyDetailsLink(dto.getSerpapiPropertyDetailsLink());
+        hotel.setRemainRooms(dto.getRemainRooms());
+        hotel.setAmenities(dto.getAmenities());
+
+        // Mapping danh sách hình ảnh
+        List<Image> imageList = new ArrayList<>();
+        if (dto.getImages() != null) {
+            for (ImageDTO imgDTO : dto.getImages()) {
+                Image image = new Image();
+                image.setThumbnail(imgDTO.getThumbnail());
+                image.setOriginalImage(imgDTO.getOriginalImage());
+                image.setHotel(hotel);
+                imageList.add(image);
+            }
+        }
+        hotel.setImages(imageList);
+
+        return hotelRepository.save(hotel);
     }
 }
