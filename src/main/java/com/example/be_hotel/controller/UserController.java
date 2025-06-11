@@ -1,10 +1,7 @@
 package com.example.be_hotel.controller;
 
 import com.example.be_hotel.config.MailConfig;
-import com.example.be_hotel.dto.ChangePassword;
-import com.example.be_hotel.dto.GetUserResponse;
-import com.example.be_hotel.dto.SendIOTPResponse;
-import com.example.be_hotel.dto.UpdateUserRequest;
+import com.example.be_hotel.dto.*;
 import com.example.be_hotel.entity.User;
 import com.example.be_hotel.helper.PasswordUtils;
 import com.example.be_hotel.service.EmailService;
@@ -109,6 +106,21 @@ public class UserController {
             @RequestBody UpdateUserRequest updateUserRequest) {
         try {
             String result = userService.updateUser(id, updateUserRequest);
+            if ("User updated successfully".equals(result)) {
+                return new ResponseEntity<>(result, HttpStatus.OK);
+            } else {
+                return new ResponseEntity<>(result, HttpStatus.BAD_REQUEST);
+            }
+        } catch (Exception e) {
+            return new ResponseEntity<>("Update failed: " + e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+    @PutMapping("/updateUserForAdmin/{id}")
+    public ResponseEntity<String> updateUserForAdmin(
+            @PathVariable Long id,
+            @RequestBody UpdateUserForAdmin user) {
+        try {
+            String result = userService.updateUserForAdmin(id, user);
             if ("User updated successfully".equals(result)) {
                 return new ResponseEntity<>(result, HttpStatus.OK);
             } else {

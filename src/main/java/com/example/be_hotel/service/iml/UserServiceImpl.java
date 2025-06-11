@@ -1,6 +1,7 @@
 package com.example.be_hotel.service.iml;
 
 import com.example.be_hotel.dto.ChangePassword;
+import com.example.be_hotel.dto.UpdateUserForAdmin;
 import com.example.be_hotel.dto.UpdateUserRequest;
 import com.example.be_hotel.entity.User;
 import com.example.be_hotel.repository.UserRepository;
@@ -117,5 +118,21 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<User> getAllUsers() {
         return userRepository.findAll();
+    }
+
+    @Override
+    public String updateUserForAdmin(Long id, UpdateUserForAdmin user) {
+        Optional<User> optionalUser = userRepository.findById(id);
+        if (optionalUser.isEmpty()) {
+            return "User not found";
+        }
+        User u = optionalUser.get();
+        u.setAvatar(user.getAvatar());
+        u.setContact(user.getContact());
+        u.setEmail(user.getEmail());
+        u.setAge(user.getAge());
+        u.setUserName(user.getUserName());
+        userRepository.save(u);
+        return "User updated successfully";
     }
 }

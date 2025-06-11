@@ -4,43 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="54a84a03-c770-48d6-9b92-596652d551cf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/dto/HotelDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/dto/ImageDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="54a84a03-c770-48d6-9b92-596652d551cf" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/dto/UpdateUserForAdmin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/controller/HotelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/controller/HotelController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/HotelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/HotelService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/iml/HotelServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/iml/HotelServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/iml/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/iml/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/config/GlobalExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/config/GlobalExceptionHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/config/WebConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/controller/HistoryOrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/controller/HistoryOrderController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/controller/HotelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/controller/HotelController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/controller/OrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/controller/OrderController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/GPSCoordinates.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/GPSCoordinates.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/HistoryOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/HistoryOrder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/HistoryRating.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/HistoryRating.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/Hotel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/Hotel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/Image.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/Image.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/NearbyPlace.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/NearbyPlace.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/Rate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/Rate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/Rating.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/Rating.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/ReviewBreakdown.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/ReviewBreakdown.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/Transportation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/Transportation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/UserOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/UserOrder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/service/HotelService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/service/HotelService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/service/iml/EmailServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/service/iml/EmailServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/service/iml/HistoryOrderImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/service/iml/HistoryOrderImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/service/iml/HistoryRatingImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/service/iml/HistoryRatingImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/service/iml/HotelServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/service/iml/HotelServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/service/iml/UserOrderImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/service/iml/UserOrderImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/service/iml/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/service/iml/UserServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -146,8 +117,19 @@
       <workItem from="1748878292837" duration="2886000" />
       <workItem from="1749005328098" duration="781000" />
       <workItem from="1749006478797" duration="623000" />
-      <workItem from="1749269206979" duration="6272000" />
+      <workItem from="1749269206979" duration="6897000" />
+      <workItem from="1749443916882" duration="6000" />
+      <workItem from="1749604551470" duration="2089000" />
     </task>
+    <task id="LOCAL-00001" summary="update">
+      <option name="closed" value="true" />
+      <created>1749357194927</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1749357194927</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,5 +145,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>

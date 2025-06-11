@@ -1,6 +1,7 @@
 package com.example.be_hotel.service;
 
 import com.example.be_hotel.dto.ChangePassword;
+import com.example.be_hotel.dto.UpdateUserForAdmin;
 import com.example.be_hotel.dto.UpdateUserRequest;
 import com.example.be_hotel.entity.User;
 
@@ -14,4 +15,5 @@ public interface UserService {
     String updateUser(Long id, UpdateUserRequest updateUserRequest);
     String changePassword(Long id, ChangePassword changePassword);
     List<User> getAllUsers();
+    String updateUserForAdmin(Long id, UpdateUserForAdmin user);
 }
