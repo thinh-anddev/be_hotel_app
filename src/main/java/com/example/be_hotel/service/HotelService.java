@@ -18,4 +18,5 @@ public interface HotelService {
     boolean decreaseRemainRoom(Long hotelId, Integer roomOrder);
     boolean increaseRemainRoom(Long hotelId, Integer roomOrder);
     Hotel addHotel(HotelDTO hotelDTO);
+    boolean deleteHotel(Long hotelId);
 }

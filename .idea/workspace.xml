@@ -4,15 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="54a84a03-c770-48d6-9b92-596652d551cf" name="Changes" comment="implement deleteuser">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/entity/Role.java" afterDir="false" />
+    <list default="true" id="54a84a03-c770-48d6-9b92-596652d551cf" name="Changes" comment="add role">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/iml/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/iml/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/service/iml/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/service/iml/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/controller/HotelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/controller/HotelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/entity/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/entity/Hotel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/HotelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/HotelService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/iml/HotelServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/iml/HotelServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/controller/HotelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/controller/HotelController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/Hotel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/Hotel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/service/HotelService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/service/HotelService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/service/iml/HotelServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/service/iml/HotelServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +123,7 @@
       <workItem from="1749269206979" duration="6897000" />
       <workItem from="1749443916882" duration="6000" />
       <workItem from="1749604551470" duration="2116000" />
-      <workItem from="1749885785907" duration="1927000" />
+      <workItem from="1749885785907" duration="7305000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -148,7 +149,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749886701294</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add role">
+      <option name="closed" value="true" />
+      <created>1749887953271</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1749887953271</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,6 +177,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update" />
     <MESSAGE value="implement deleteuser" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement deleteuser" />
+    <MESSAGE value="add role" />
+    <option name="LAST_COMMIT_MESSAGE" value="add role" />
   </component>
 </project>

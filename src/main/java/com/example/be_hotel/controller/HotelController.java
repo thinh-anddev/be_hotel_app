@@ -70,4 +70,13 @@ public class HotelController {
         Hotel saved = hotelService.addHotel(hotelDTO);
         return new ResponseEntity<>(saved, HttpStatus.CREATED);
     }
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> deleteHotel(@PathVariable("id") Long id) {
+        boolean deleted = hotelService.deleteHotel(id);
+        if (deleted) {
+            return ResponseEntity.ok("Xóa khách sạn thành công");
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Không tìm thấy khách sạn");
+        }
+    }
 }

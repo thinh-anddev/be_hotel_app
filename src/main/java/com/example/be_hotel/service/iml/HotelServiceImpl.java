@@ -142,4 +142,13 @@ public class HotelServiceImpl implements HotelService {
 
         return hotelRepository.save(hotel);
     }
+    @Override
+    public boolean deleteHotel(Long hotelId) {
+        Optional<Hotel> hotelOptional = hotelRepository.findById(hotelId);
+        if (hotelOptional.isPresent()) {
+            hotelRepository.deleteById(hotelId);
+            return true;
+        }
+        return false;
+    }
 }

@@ -28,40 +28,42 @@ public class Hotel {
     private String propertyToken;
     private String serpapiPropertyDetailsLink;
     private Integer remainRooms;
+
+    // One-to-one: GPS coordinates (có khóa ngoại từ GPS trỏ về Hotel)
     @JsonManagedReference
-    @OneToOne(mappedBy = "hotel")
+    @OneToOne(mappedBy = "hotel", cascade = CascadeType.ALL, orphanRemoval = true)
     @ToString.Exclude
     private GPSCoordinates gpsCoordinates;
 
+    // One-to-one: Rate per night (có khóa ngoại từ Rate trỏ về Hotel)
     @JsonManagedReference
+    @OneToOne(mappedBy = "hotel", cascade = CascadeType.ALL, orphanRemoval = true)
     @ToString.Exclude
-    @OneToOne(mappedBy = "hotel")
     private Rate ratePerNight;
 
-    @JsonManagedReference
-    @ToString.Exclude
+    // ElementCollection: amenities (không cần cascade)
     @ElementCollection(fetch = FetchType.LAZY)
     @CollectionTable(name = "hotel_amenities", joinColumns = @JoinColumn(name = "hotel_id"))
     @Column(name = "amenity")
+    @ToString.Exclude
     private List<String> amenities;
 
     @JsonManagedReference
+    @OneToMany(mappedBy = "hotel", cascade = CascadeType.ALL, orphanRemoval = true)
     @ToString.Exclude
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "hotel")
     private List<NearbyPlace> nearbyPlaces;
 
     @JsonManagedReference
+    @OneToMany(mappedBy = "hotel", cascade = CascadeType.ALL, orphanRemoval = true)
     @ToString.Exclude
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "hotel")
     private List<Image> images;
 
     @JsonManagedReference
+    @OneToMany(mappedBy = "hotel", cascade = CascadeType.ALL, orphanRemoval = true)
     @ToString.Exclude
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "hotel")
     private List<Rating> ratings;
-
     @JsonManagedReference
+    @OneToMany(mappedBy = "hotel", cascade = CascadeType.ALL, orphanRemoval = true)
     @ToString.Exclude
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "hotel")
     private List<ReviewBreakdown> reviewsBreakdown;
 }
