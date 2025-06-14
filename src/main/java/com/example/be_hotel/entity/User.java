@@ -26,6 +26,8 @@ public class User {
     private Integer age;
     private String avatar;
     private String contact;
+    @Enumerated(EnumType.STRING)
+    private Role role;
 
     @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
     private LocalDateTime dateCreated;

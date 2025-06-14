@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="54a84a03-c770-48d6-9b92-596652d551cf" name="Changes" comment="update">
+    <list default="true" id="54a84a03-c770-48d6-9b92-596652d551cf" name="Changes" comment="implement deleteuser">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/entity/Role.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/iml/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/be_hotel/service/iml/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/be_hotel/service/iml/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/be_hotel/service/iml/UserServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +23,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Kotlin Enum" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -116,7 +122,7 @@
       <workItem from="1749269206979" duration="6897000" />
       <workItem from="1749443916882" duration="6000" />
       <workItem from="1749604551470" duration="2116000" />
-      <workItem from="1749885785907" duration="845000" />
+      <workItem from="1749885785907" duration="1927000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -134,7 +140,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749607175235</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="implement deleteuser">
+      <option name="closed" value="true" />
+      <created>1749886701294</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1749886701294</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,6 +167,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="implement deleteuser" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement deleteuser" />
   </component>
 </project>

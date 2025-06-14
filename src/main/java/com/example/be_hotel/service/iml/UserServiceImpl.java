@@ -3,6 +3,7 @@ package com.example.be_hotel.service.iml;
 import com.example.be_hotel.dto.ChangePassword;
 import com.example.be_hotel.dto.UpdateUserForAdmin;
 import com.example.be_hotel.dto.UpdateUserRequest;
+import com.example.be_hotel.entity.Role;
 import com.example.be_hotel.entity.User;
 import com.example.be_hotel.repository.UserRepository;
 import com.example.be_hotel.service.UserService;
@@ -42,6 +43,7 @@ public class UserServiceImpl implements UserService {
         }
 
         user.setDateCreated(LocalDateTime.now());
+        user.setRole(Role.USER);
         userRepository.save(user);
         return "User registered successfully";
 
