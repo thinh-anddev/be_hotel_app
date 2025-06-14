@@ -135,4 +135,15 @@ public class UserServiceImpl implements UserService {
         userRepository.save(u);
         return "User updated successfully";
     }
+
+    @Override
+    public String deleteUser(Long id) {
+        Optional<User> optionalUser = userRepository.findById(id);
+        if (optionalUser.isEmpty()) {
+            return "User not found";
+        }
+
+        userRepository.deleteById(id);
+        return "User deleted successfully";
+    }
 }
