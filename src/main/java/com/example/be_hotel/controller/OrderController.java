@@ -1,9 +1,11 @@
 package com.example.be_hotel.controller;
 
+import com.example.be_hotel.dto.DiscountValidationResponse;
 import com.example.be_hotel.dto.HotelBookingStat;
 import com.example.be_hotel.dto.ListOrderResponse;
 import com.example.be_hotel.entity.Revenue;
 import com.example.be_hotel.entity.UserOrder;
+import com.example.be_hotel.service.DiscountCodeService;
 import com.example.be_hotel.service.HotelService;
 import com.example.be_hotel.service.RevenueService;
 import com.example.be_hotel.service.UserOrderService;
@@ -14,6 +16,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/order")
@@ -24,9 +27,21 @@ public class OrderController {
     HotelService hotelService;
     @Autowired
     RevenueService revenueService;
+    @Autowired
+    DiscountCodeService discountCodeService;
 
     @PostMapping("/saveOrder")
     public ResponseEntity<String> saveOrder(@RequestBody UserOrder order) {
+        // Apply discount code if provided
+        if (order.getDiscountCode() != null && !order.getDiscountCode().isEmpty()) {
+            // Validate and apply the discount code
+            if (discountCodeService.validateDiscountCode(order.getDiscountCode(), order.getTotalPrice())) {
+                order = discountCodeService.applyDiscountCode(order, order.getDiscountCode());
+            } else {
+                return new ResponseEntity<>("Invalid discount code", HttpStatus.BAD_REQUEST);
+            }
+        }
+
         String response = service.saveOrder(order);
         boolean b = hotelService.decreaseRemainRoom(order.getHotelId(), order.getRooms());
         if (response.equals("successfully")) {
@@ -37,6 +52,31 @@ public class OrderController {
             }
         } else {
             return new ResponseEntity<>("failed", HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    @GetMapping("/validateDiscountCode")
+    public ResponseEntity<DiscountValidationResponse> validateDiscountCode(@RequestParam String code, @RequestParam Double orderAmount) {
+        boolean isValid = discountCodeService.validateDiscountCode(code, orderAmount);
+        if (isValid) {
+            // Get the discount code details
+            return discountCodeService.getDiscountCodeByCode(code)
+                    .map(discountCode -> {
+                        Double discountAmount = discountCode.calculateDiscountAmount(orderAmount);
+                        Double finalPrice = orderAmount - discountAmount;
+
+                        // Return discount information using the DTO
+                        DiscountValidationResponse response = DiscountValidationResponse.createValidResponse(
+                            orderAmount,
+                            discountAmount,
+                            finalPrice
+                        );
+
+                        return ResponseEntity.ok(response);
+                    })
+                    .orElse(ResponseEntity.ok(DiscountValidationResponse.createInvalidResponse("Discount code not found")));
+        } else {
+            return ResponseEntity.ok(DiscountValidationResponse.createInvalidResponse("Invalid discount code"));
         }
     }
     @GetMapping("/getOrder/{id}")
