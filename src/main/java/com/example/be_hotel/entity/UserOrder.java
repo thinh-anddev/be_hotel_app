@@ -25,6 +25,15 @@ public class UserOrder {
     private Integer rooms;
     private Integer numberPeople;
     private Double totalPrice;
+
+    // Original price before discount
+    private Double originalPrice;
+
+    // Discount amount applied
+    private Double discountAmount;
+
+    // Reference to the discount code used
+    private String discountCode;
     @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
     private LocalDateTime dateCreated;
     @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
